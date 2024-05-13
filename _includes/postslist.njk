@@ -1,0 +1,12 @@
+
+<div id="articles" class="d-flex flex-column flex-md-row p-1 gap-4 py-md-4 align-items-center justify-content-center">
+  <div class="list-group list-group-checkable d-grid gap-6 border-0">
+    <span class="h3">Les derniers articles</span>
+    {% for post in postslist %}
+    <label class="list-group-item rounded-3 py-6 border-success" for="listGroupCheckableRadios1">
+      <a class="h5 link-success" href="{{ post.url | url }}"> {{ post.data.title }}</a>
+      <span class="h6 d-block small opacity-50">{{ post.data.description }}
+    </label>
+    {% endfor %}
+  </div>
+</div>
