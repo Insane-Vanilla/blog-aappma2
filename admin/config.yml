@@ -1,16 +1,17 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: main
 
 media_folder: "_site/images/uploads"
 public_folder: "/images/uploads"
+folder: posts
 
 collections: 
-  - name : "posts"
-    label : "Posts" 
-    folder : "posts"
-    slug : "{{day}}-{{month}}-{{year}}-{{slug}}"
-    fields :
+  - name: "posts"
+    label: "Posts" 
+    folder: "posts"
+    create: true
+    fields:
       - { label : "Layout", name : "layout", widget : "hidden", default : "layouts/post.njk" }
       - { label : "Title", name : "title", widget : "string" }
       - { label : "Description", name : "description", widget : "string" }

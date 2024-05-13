@@ -4,12 +4,13 @@ backend:
 
 media_folder: "_site/images/uploads"
 public_folder: "/images/uploads"
+folder: posts
 
 collections: 
   - name : "posts"
     label : "Posts" 
     folder : "posts"
-    slug : "{{day}}-{{month}}-{{year}}-{{slug}}"
+    create: true
     fields :
       - { label : "Layout", name : "layout", widget : "hidden", default : "layouts/post.njk" }
       - { label : "Title", name : "title", widget : "string" }
